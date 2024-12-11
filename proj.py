@@ -1,19 +1,19 @@
 # we want to be able to add people including age, occupation,id number, and name
 # referencing persons information will return results
 
-names = []
-ages = []
-emails = []
+employee = []
+
 
 for i in range(3):
     print(i + 1, "Input")
     name = input("Name: ")
     age = input("Age: ")
     email = input("Email: ")
-
-    names.append(name)
-    ages.append(age)
-    emails.append(email)
+    id = input("I.D.: ")
 
 
-print(names, ages, emails)
+    person = {"name": name, "age": age, "email": email, "i.d.": id}
+    employee.append(person)
+
+print(employee)
+
