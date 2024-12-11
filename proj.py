@@ -73,7 +73,7 @@ while True:
         print("Imvalid command.")
 
 with open("contacts.json", "w") as f:
-    people = json.load(f)["contacts"]
-    json.dump(f, {"contacts": people})
+    # people = json.load(f)["contacts"]
+    json.dump({"contacts": people}, f)
 
 print(people)
