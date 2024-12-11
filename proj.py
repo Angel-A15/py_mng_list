@@ -12,10 +12,14 @@ def add_person():
     person = {"name": name, "age": age, "email": email, "i.d.": id, "occupation": occupation}
     return person
 
-def delete_contact(people):
+def display_people(people):
     for i, person in enumerate(people):
         print(i + 1, "-", person["name"], "|", person["age"], person["email"], person["i.d."], person["occupation"])
     
+
+def delete_contact(people):
+    display_people(people)
+
     while True:
         number = input("Enter a number to delete: ")
         try:
@@ -28,6 +32,18 @@ def delete_contact(people):
             print("Invali number")
 
     people.pop(number - 1)
+    print("Person deleted")
+
+
+def search(people):
+    search_name = input("Search for a name: ").lower()
+    results = []
+
+    for person in people:
+        name = person["name"]
+        if search_name in name.lower():
+            results.append(person)
+    display_people(results)
 
 
 print("Hello, welcome to the Contact Management System.")
@@ -37,6 +53,7 @@ people = []
 
 
 while True:
+    print("Contact list size:", len(people))
     command = input("You can 'Add', 'Delete', or 'Search and 'Q' to exit: ").lower()
 
     if command == "add":
@@ -47,7 +64,7 @@ while True:
     elif command == "delete":
         delete_contact(people)
     elif command == "search":
-        pass
+        search(people)
     elif command == "q":
         break
     else:
