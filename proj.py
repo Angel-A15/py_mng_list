@@ -72,4 +72,8 @@ while True:
     else:
         print("Imvalid command.")
 
+with open("contacts.json", "w") as f:
+    people = json.load(f)["contacts"]
+    json.dump(f, {"contacts": people})
+
 print(people)
