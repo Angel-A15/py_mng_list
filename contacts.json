@@ -1,0 +1,25 @@
+{
+    "contacts": [
+        {
+            "name": "Alex",
+            "age": "54",
+            "email": "alex3@gmail.com",
+            "i.d.": "939393",
+            "occupation": "Custodian"
+        },
+                {
+            "name": "Trey",
+            "age": "43",
+            "email": "trey3@gmail.com",
+            "i.d.": "939234",
+            "occupation": "Admin"
+        },
+        {
+            "name": "Qausar",
+            "age": "22",
+            "email": "quas3@gmail.com",
+            "i.d.": "937898",
+            "occupation": "CEO"
+        }
+    ]
+}

@@ -1,5 +1,6 @@
 # we want to be able to add people including age, occupation,id number, and name
 # referencing persons information will return results
+import json
 
 
 def add_person():
@@ -49,7 +50,8 @@ def search(people):
 print("Hello, welcome to the Contact Management System.")
 print()
 
-people = []
+with open("contacts.json", "r") as f:
+    people = json.load(f)["contacts"]
 
 
 while True:
