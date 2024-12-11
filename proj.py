@@ -1,19 +1,32 @@
 # we want to be able to add people including age, occupation,id number, and name
 # referencing persons information will return results
 
-employee = []
 
-
-for i in range(3):
-    print(i + 1, "Input")
+def add_person():
     name = input("Name: ")
     age = input("Age: ")
     email = input("Email: ")
     id = input("I.D.: ")
+    occupation = input("Occupation: ")
+    
+    person = {"name": name, "age": age, "email": email, "i.d.": id, "occupation": occupation}
+    return person
 
+print("Hello, welcome to the Contact Management System.")
+print()
+command = input("You can 'Add', 'Delete', or 'Search: ").lower()
+people = []
 
-    person = {"name": name, "age": age, "email": email, "i.d.": id}
-    employee.append(person)
+if command == "add":
+    person = add_person()
+    people.append(person)
+    print("Person added")
 
-print(employee)
+elif command == "delete":
+    pass
+elif command == "search":
+    pass
+else:
+    print("Imvalid command.")
 
+print(people)
